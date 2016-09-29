@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/razopuruxa/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+// JavaScript Objects
+var superHero ={
+  heroName: "Megamind",
+  status: "anti-hero",
+  secretIdentity: "Bernard",
+  color: "Blue",
+  Henchman: "Minion",
+  loveInterest: "Roxanne Ritchie",
+  superPowers: "brains",
+  hero: function(){
+    return this.heroName+" saved the day by using his Brains!";
+  }
+}
+
+//calling a property
+console.log (superHero.color);
+
+//calling a method
+console.log(superHero.hero());
+
+superHero.status = "Hero";
+
+// Calling a property
+console.log(superHero.status);
+
+//Adding a property
+superHero.costume = "Black Leather";
+console.log(superHero.costume);
+
+//Deleting a object property
+delete superHero.secretIdentity;
+console.log(superHero.secretIdentity);
+
+
+
+
+
+
+</script>
+</body>
+</html>
