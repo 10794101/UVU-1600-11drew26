@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/desalumuce/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+
+var interogate=alert ("Now that you have inspected the crime scene, it's time for you to question the other suspects who were around during the time of the murder.You know that the victims wife; Mrs. Scarlett was around during the time of the murder as well as the Chef.");
+
+function alibis(){
+var suspect=prompt("What would you like to do next?\n~To question Mrs. Scarlett enter: W\n~To question the Chef enter: C\n~You have gathered all the clues you need and are ready to accuse your killer, enter: A.").toLowerCase(); 
+if (suspect=="w"){
+wife();
+  alibis();
+}
+ 
+  else if(suspect=="c"){
+    chef();
+    alibis();
+  }
+  else if(suspect=="a"){
+    conviction();
+  }
+else{
+alert ("You are in charge of this case, catching the killer is up to you, you must do something!");
+alibis();
+}
+function wife(){
+alert ("you walk up stairs to the master bed room, there you find Mrs. Scarlett crying on the bed, you make enough noise to draw her attention, she tries her best to compose herself. You ask her where she was at the time of the murder, she says that she was right here taking a sunday afternoon nap and when she woke up she called out to her husband but when he never answered she went looking for him, and found him dead in a pool of his own blood, thats when she called you. you ask her if she knows anything else, she says she knows that the maid and chef were around before she went to sleep but nothing after that.")
+}
+  function chef(){
+    alert("You walk down the hall into the kitchen, their is a faint smell of basil idk? you find the chef in the corner sitting on a bench he looks very nervous you ask him where he was and he tells you that he was in the garden gathering some fresh vegetables for dinner that evening, you notice that there is blood on his apron when asked about it, he informs you he was planning on serving steak this eveing and that the blood was from preparing them. Your last question is about the knife that was found at the crime scene, and how it seems match the one missing form his knife cabinet? He tells you that he left it on the counter top after preparing the steaks and when he got back from the gardens that it was missing thats when he heard Mrs. Scarletts screams!")
+  }
+  function Conviction(){
+    
+  }
+}
+alibis();
+
+
+function conviction(){
+var convict=alert ("It's time for you to make your decision");
+var choice=prompt("Who are you going to convict for the murder of Mr. Scarlett?\nTo convict Mrs. Scarlett type: Scarlett\nFor the Cook type: Cook\nFor the Maid type: Maid").toLowerCase(); 
+if (choice=="scarlett"){
+winner();
+}
+  else if(choice=="cook"){
+    loser();
+  }
+  else if(choice=="maid"){
+    loser();
+  }
+else{
+alert ("You must choose someone.");
+conviction();
+}
+function winner(){
+alert ("You solved the case!\nThe murderer had to be Mrs. Scarlett because if she was really napping there would be no way for her to know what the otehr suspects were doing during the time of the crime. Congratulations, nothing gets past your all seeing eye!")
+}
+  function loser(){
+    alert("You convicted the wrong person! Because of your rash decision the real murderer runs free!")
+  }
+}
+
+
+
+
+
+
+</script>
+</body>
+</html>
