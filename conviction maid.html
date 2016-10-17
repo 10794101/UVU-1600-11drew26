@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/muvogacosa/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+function conviction(){
+var convict=alert ("It's time for you to make your decision");
+var choice=prompt("Who are you going to convict for the murder of Mr. Scarlett?\nTo convict Mrs. Scarlett type: Scarlett\nFor the Chef type: Chef\nFor the Maid type: Maid").toLowerCase(); 
+if (choice=="maid"){
+winner();
+}
+  else if(choice=="chef"){
+    loser();
+  }
+  else if(choice=="scarlett"){
+    loser();
+  }
+else{
+alert ("You must choose someone.");
+conviction();
+}
+function winner(){
+alert ("You solved the case!\nThe murderer had to be the Maid because during the time of the murder she said she was retrieving the mail, However today is sunday and there is no postage delivered on Sunday. Congratulations, nothing gets past your all seeing eye!")
+}
+  function loser(){
+    alert("You convicted the wrong person! Because of your rash decision the real murderer runs free!")
+  }
+}
+conviction();
+
+</script>
+</body>
+</html>
