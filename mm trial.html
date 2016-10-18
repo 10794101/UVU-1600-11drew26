@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!--
+Created using JS Bin
+http://jsbin.com
+
+Copyright (c) 2016 by anonymous (http://jsbin.com/magegozova/1/edit)
+
+Released under the MIT license: http://jsbin.mit-license.org
+-->
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>JS Bin</title>
+</head>
+<body>
+
+<script id="jsbin-javascript">
+ function winner()
+          {
+            alert ("You solved the case!\nThe murdurer was the maid becasue during the time of the murder she said that she was retrieving the mail, however the day is sunday and there is no postage on Sunday. Congratulations nothing gets past your all seeing eye!")
+            document.write("You lose.");
+          }
+ function loser()
+          {
+            alert("You convicted the wrong person! Because of your rash decision the real murderer runs free!")
+            document.write("You Win!");
+          }
+ function begin ()
+    {
+    alert("Murder Mystery Game v0.1");
+    var playerName=prompt("Name your character.");
+    var confirmPlayerName("Is "+playerName+" the name you would like to go by?");
+      if (confirmPlayerName==true)
+      {
+        case();
+      }
+      else 
+        begin();
+      }
+      
+fuction case(){
+  alert("it's sunday you recieve a phone call reporting that there has been a murder at this address");
+  alert("hop in your car and pull up to very large and spacious building");
+    
+    var car = prompt("Do you walk up to the front or do you go around back because this is your house now and you own this case? \n~To go to the front door enter: front\n~To sneak around back enter: back" );
+      switch(car){
+        case "front":
+            alert("you go to the front door");
+            break;
+        case "back":
+            alert("You sneek out back and find the back door to the kitchen to be open, you walk in and take a look around, suddently you feel a sharp pain on the back of your head, your vision starts to blur as you fall to the ground, the last thing you see is the shadow of the person who hit you.");
+            alert("You Die, the killer saw you sneak around the back and they didn't want you snooping arouond.");
+            alert("Thanks to your arogant thinking you are dead and the killer is still out there.");
+            document.write("You Lose."); 
+            break;
+        default:
+            alert("'"+car+"'"+" does not compute. please review the options carefully and try agian.");
+            case();
+        }
+}
+
+</script>
+</body>
+</html>
