@@ -1,35 +1,20 @@
+function enterDoor(){
+    var door = new Array();
+    door[0]="the Maid comes to the door and welcomes you inside.";
+    door[1]="Mrs. Scarlett comes to the door you can tell by how distraught she seems.";
+    door[2]="You don't ring the doorbell, you just walk inside because this is your house now, you own this case.";
 
+    var randomDoor = door[Math.floor(Math.random() * door.length)];
+    document.write(randomDoor);
 
-<html>
-	<head>
-        <title>Choose Your Own Adventure Game</title>
-	</head>
-	<body>
-        <script>
-        function enterDoor(){
-            var door = new Array();
-            door[0]="the Maid comes to the door and welcomes you inside.";
-            door[1]="Mrs. Scarlett comes to the door you can tell by how distraught she seems.";
-            door[2]="You don't ring the doorbell, you just walk inside because this is your house now, you own this case.";
-
-            var randomDoor = door[Math.floor(Math.random() * door.length)];
-            alert(randomDoor);
-
-            if(randomDoor=="the Maid comes to the door and welcomes you inside.")
-            {
-            alert("maid takes you to the crime scene.");
-            }
-            else if(randomDoor=="Mrs. Scarlett comes to the door you can tell by how distraught she seems.")
-            {
-            alert("Mrs. Scarlett takes you to the crime scene and you inspect it.");
-            }
-            else{
-                alert("You don't ring the doorbell, you just walk inside because this is your house now, you own this case. suddenly you feel a sharp pain on the back of your head, everyting gets fuzzy and then you feel nothing. You die the murderer was expecting your arrival and didn't want you snooping around.");
-                        }
-                        alert(door[0]+" "+door[1]+" "+door[2]);
+    if(randomDoor=="the Maid comes to the door and welcomes you inside.")
+    {
+    alert("maid takes you to the crime scene.")
+    }
+    else if(randomDoor=="Mrs. Scarlett comes to the door you can tell by how distraught she seems.")
+    {
+    alert("mrs. scarlett takes you to the crime scene and you inspect it.")
+    }
+    else
+        alert("You don't ring the doorbell, you just walk inside because this is your house now, you own this case. suddenly you feel a sharp pain on the back of your head, everyting gets fuzzy and then you feel nothing. You die the murderer was expecting your arrival and didn't want you snooping around.")
         }
-            enterDoor();
-            
-        </script>
-	</body>
-</html>
