@@ -1,0 +1,185 @@
+<html>
+    <head>
+    	<title>Murder Mystery Game</title>
+    </head>
+
+    <body>
+    	<script>
+			
+     function victory()
+         {
+             alert ("You solved the case!\nThe murderer had to be Mrs. Scarlett because at the time of the murder she said that she was sleeping but if she was sleeping then she would have had no way of knowing what the other suspects were doing at the time of the murder.");
+            document.write("You Win!");
+         }
+             
+     function winner()
+          {
+            alert ("You solved the case!\nThe murdurer was the maid becasue during the time of the murder she said that she was retrieving the mail, however the day is sunday and there is no postage on Sunday. Congratulations nothing gets past your all seeing eye!")
+            document.write("You Win!");
+          }
+    function loser()
+          {
+            alert("You convicted the wrong person! Because of your rash decision the real murderer runs free!")
+            document.write("You lose.");
+          }
+             /*---random door---*/   
+	function enterDoor()
+    {
+            var door = new Array();
+             door[0]="the Maid comes to the door and welcomes you inside.";
+             door[1]="Mrs. Scarlett comes to the door you can tell by how distraught she seems.";
+             var randomDoor = door[Math.floor(Math.random() * door.length)];
+             alert(randomDoor);
+             if(randomDoor=="the Maid comes to the door and welcomes you inside.")
+             {
+             alert("The maid tells you that they have been expecting you and says that you probably would like to be shown to the scene of the crime. You start your way up the large spiral staircase, meanwhile you start asking the maid what she remembers?");
+             alert("She tells you that she was cleaning Mr. Scarlett's private study, when Mr. Scarlett asked her to go out and retrieve the the mail, and when she returned she heard Mrs. Scarlett's screams and ran up stairs however Mr. Scarlett was already dead! She does mention that on her way out she passed the Chef who was holding a large kitchen knife.");
+             alert("After making your way up the stairwell, you go down the hall and turn right into what must be Mr. Scarlett's private study.");
+             alert("There in front of his desk lays Mr. Scarlett face down in a pool of blood.");
+             alert("meanwhile The forensic specialist is taking photos and brushing for fingertips on the knife that was found laying beside Mr. Scarlett. The speacilist hands you the autopsy report.");
+               var autopsy=["Name: Mike Scarlett"," Age: 52"," Sex: M"," Cause of Death: Bleed Out, multiple (7) stab wounds surrounding the chest cavity and abdomen", " Time of death: Sunday, May 08, 2016 approximately @1:30pm"];
+                alert(autopsy[0]+" "+autopsy[1]+" "+autopsy[2]+" "+autopsy[3]+" "+autopsy[4]);
+                alert("Now that you have inspected the crime scene, it's time for you to question the other suspects who were around during the time of the murder.You know that the victims wife; Mrs. Scarlett was around during the time of the murder as well as the Chef.");
+                    alibis(); 
+             }
+             else {
+             alert("Mrs. Scarlett comes to the door you can tell by how distraught she seems.");
+             alert("she tells you she's been waiting for you she is the one who called she's covered in blood who can only assume belonged to her husband.");
+             alert("She tells you that she doesn't know who could be behind this? Everyone loved her husband.You ask her what she knows? She tells you that after enjoying brunch with her husband she went upstairs and took a nap and when she woke up she called out for her husband but when she never got a response she went looking and that is when she found him dead in his office. She does inform you that while she was asleep the maid was in the living room dusting and that the chef was downstairs in the kitchen preparing for supper. She supposes it could be one of them?");
+             alert("You ask her to take you to the crime scene.");
+             alert("she leads you up the large spiral staircase and down a hallway into a room that appears to be Mr. Scarlett's private study.");
+             alert("There in front of his desk lays Mr. Scarlett face down in a pool of blood.");
+             alert("meanwhile The forensic specialist is taking photos and brushing for fingertips on the knife that was found laying beside Mr. Scarlett. The speacilist hands you the autopsy report.");
+                var autopsy=["Name: Mike Scarlett"," Age: 52"," Sex: M"," Cause of Death: Bleed Out, multiple (7) stab wounds surrounding the chest cavity and abdomen", " Time of death: Sunday, May 08, 2016 approximately @1:30pm"];
+                alert(autopsy[0]+" "+autopsy[1]+" "+autopsy[2]+" "+autopsy[3]+" "+autopsy[4]);
+                alert("Now that you have inspected the crime scene, it's time for you to question the other suspects who were around during the time of the murder.You know that the Maid of the Manor was around during the time of the murder as well as the Chef.");  
+                    explanation();
+             }
+           }
+          function explanation()
+          {
+              var accused=prompt("What would you like to do next?\n~To question the Maid enter: M\n~To question the Chef enter: C\n~You have gathered all the clues you need and are ready to accuse your killer, enter: A.").toLowerCase();
+                    if (accused=="m"){
+                        maid();
+                        explanation();
+                    }
+                    else if(accused=="c"){
+                        chef();
+                        explanation();
+                    }
+                    else if(accused=="a"){
+                        judgement();
+                    }
+                    else{
+                        alert("You are in charge of this case, catching the killer is all up to you, you must do something!");
+                        explanation();
+                    }
+          }
+           function alibis()
+           {
+               var suspect=prompt("What would you like to do next?\n~To question Mrs. Scarlett enter: W\n~To question the Chef enter: C\n~You have gathered all the clues you need and are ready to accuse your killer, enter: A.").toLowerCase();
+                    if (suspect=="w"){
+                        wife();
+                        alibis();
+                    }
+                    else if(suspect=="c"){
+                        chef();
+                        alibis();
+                    }
+                    else if(suspect=="a"){
+                        conviction();
+                    }
+                    else{
+                        alert("You are in charge of this case, catching the killer is all up to you, you must do something!");
+                        alibis();
+                    }
+           }
+             
+            function maid(){
+                alert("You go back downstairs to where the living room is, there you find the maid sitting down on the floor in the corner of the room, she is an attractive young woman, probably in her early twenties, she looks very disturbed. You ask her to stand up as you ask her some questions.");
+                alert("She stands up, still seeming rather shaken up, you ask her how long she has worked here for? And she tells you for about six months, you ask her where she was around noon to the time of the murder?");
+                alert("She tells you that she was upstairs cleaning the master bedroom when Mrs. Scarlett came in telling her to leave so that she could take a nap, so she came down to the living room (where you are at now) and began dusting down here instead, not too much longer after that is when she heard Mrs. Scarlett's blood curddling screams. She tells you she didn't kill Mr. Scarlett.");
+            }
+             function wife(){
+                 alert("you walk up stairs to the master bed room, there you find Mrs. Scarlett crying on the bed, you make enough noise to draw her attention, she tries her best to compose herself. You ask her where she was at the time of the murder, she says that she was right here taking a sunday afternoon nap and when she woke up she called out to her husband but when he never answered she went looking for him, and found him dead in a pool of his own blood, thats when she called you.");
+                 alert(" you ask her if she knows anything else, she says she knows that the maid and chef were around before she went to sleep but nothing after that.");
+             }
+             function chef(){
+                 alert("You walk down the hall into the kitchen, their is a faint smell of basil idk? you find the chef in sitting by the counter on a bench he is an older gentleman, probably in his late fifties, looks very nervous you ask him where he was and he tells you that he was in the garden gathering some fresh vegetables for dinner that evening, you notice that there is blood on his apron when asked about it, he informs you he was planning on serving steak this eveing and that the blood was from preparing them. Your last question is about the knife that was found at the crime scene, and how it seems match the one missing form his knife cabinet? He tells you that he left it on the counter top after preparing the steaks and when he got back from the gardens that it was missing thats when he heard Mrs. Scarletts screams! But he assures you that he had nothing to do with Mr. Scarlett's untimely death.");
+            }
+           function judgement(){
+               var felon=alert("The time has come for you to make your judgement.");
+               var pick=prompt("Who are you going to convict for the murder of Mr. Scarlett?\nTo convict Mrs. Scarlett type: Scarlett\nFor the Chef type: Chef\nFor the Maid type: Maid").toLowerCase();
+                      if(pick=="scarlett"){
+                          victory();
+                      }
+                      else if(pick=="chef"){
+                          loser();
+                      }
+                      else if(pick=="maid"){
+                          loser();
+                      }
+                      else{
+                          alert("You have to pick someone.");
+                          judgement();
+                      }
+           } 
+            function conviction(){
+                var convict=alert("It is time for you to make your decision.");
+                var choice=prompt("Who are you going to convict for the murder of Mr. Scarlett?\nTo convict Mrs. Scarlett type: Scarlett\nFor the Chef type: Chef\nFor the Maid type: Maid").toLowerCase();
+                    if(choice=="scarlett"){
+                        loser();
+                    }
+                    else if(choice=="chef"){
+                        loser();
+                    }
+                    else if(choice=="maid"){
+                        winner();
+                    }
+                    else{
+                        alert("You must choose someone.");
+                        conviction();
+                    }
+            }
+
+    
+    	//Start Game
+			function begin ()
+            {
+               alert("Murder Mystery Game");
+               var playerName=prompt("Name your character.");
+               var confirmPlayerName=confirm("Is "+playerName+" the name you would like to go by?");
+               if (confirmPlayerName==true)
+                {
+                    myCase();
+                } 
+                else {
+                    begin();
+                }
+            }
+		function myCase(){
+            alert("it's sunday you recieve a phone call reporting that there has been a murder at this address");
+            alert("hop in your car and pull up to very large and spacious building");
+            var car=prompt("Do you walk up to the front or do you go around back because this is your house now and you own this case?\n~To go to the front door enter: front\n~To sneak around to the back entrance ener: back");
+            switch(car)
+            {
+                case "front":
+                    alert("You go up to the front door and ring the door bell and wait patiently.");
+                    enterDoor();
+                    break;
+                case "back":
+                    alert("You sneek out back and find the back door to the kitchen to be open, you walk in and take a look around, suddently you feel a sharp pain on the back of your head, your vision starts to blur as you fall to the ground, the last thing you see is the shadow of the person who hit you.")
+                    alert("You Die, the killer saw you sneak around the back and they didn't want you snooping arouond.");
+                    alert("Thanks to your arogant thinking you are dead and the killer is still out there.");
+                    document.write("You Lose."); 
+                    break;
+                default:
+                alert("'"+car+"'"+"does not compute. Please review the options carefully and try again.");
+            }
+        }
+
+					//Begin game
+			begin();
+		</script>
+    </body>
+</html>
